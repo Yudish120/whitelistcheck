@@ -1,0 +1,73 @@
+name: Build olcRTC Transport Test IPA
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.26.5"
+          cache: false
+
+      - name: Install tools
+        run: |
+          set -euxo pipefail
+          brew install xcodegen
+          go install golang.org/x/mobile/cmd/gomobile@latest
+          go install golang.org/x/mobile/cmd/gobind@latest
+          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+
+      - name: Initialize gomobile
+        run: |
+          export PATH="$(go env GOPATH)/bin:$PATH"
+          gomobile init
+
+      - name: Build olcRTC iOS framework
+        run: |
+          export PATH="$(go env GOPATH)/bin:$PATH"
+          bash scripts/build_olcrtc_ios.sh
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build unsigned IPA
+        run: |
+          set -euxo pipefail
+          rm -rf build Payload WhiteListTransportTest-unsigned.ipa
+
+          xcodebuild \
+            -project WhiteListTransportTest.xcodeproj \
+            -scheme WhiteListTransportTest \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build | tee build.log
+
+          APP="build/Build/Products/Release-iphoneos/WhiteListTransportTest.app"
+          test -d "$APP"
+
+          mkdir -p Payload
+          cp -R "$APP" Payload/
+          /usr/bin/zip -qry WhiteListTransportTest-unsigned.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: WhiteListTransportTest-unsigned-ipa
+          path: |
+            WhiteListTransportTest-unsigned.ipa
+            build.log
+          if-no-files-found: error
