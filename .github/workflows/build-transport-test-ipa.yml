@@ -48,7 +48,7 @@ jobs:
           test -f App/AppModel.swift
           test -f Shared/OLCBridge.m
           ! grep -q "self.profile.provider" App/AppModel.swift
-          grep -q "let provider = profile.provider" App/AppModel.swift
+          sed -n '/func check() async {/,/func ping() async {/p' App/AppModel.swift | head -120
           grep -q "BOOL succeeded = MobileCheck" Shared/OLCBridge.m
           grep -q "BOOL succeeded = MobilePing" Shared/OLCBridge.m
           grep -q "&elapsed" Shared/OLCBridge.m
