@@ -102,7 +102,7 @@ final class AppModel: ObservableObject {
         do {
             let result = try await Task.detached(priority: .userInitiated) {
                 var error: NSError?
-                let elapsed = await WLOLCCheck(
+                let elapsed = WLOLCCheck(
                     provider,
                     transport,
                     room,
@@ -153,7 +153,7 @@ final class AppModel: ObservableObject {
         do {
             let result = try await Task.detached(priority: .userInitiated) {
                 var error: NSError?
-                let elapsed = await WLOLCPing(
+                let elapsed = WLOLCPing(
                     provider,
                     transport,
                     room,
