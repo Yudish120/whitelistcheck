@@ -36,6 +36,143 @@ jobs:
           export PATH="$(go env GOPATH)/bin:$PATH"
           bash scripts/build_olcrtc_ios.sh
 
+      - name: Patch Swift concurrency
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path("App/AppModel.swift")
+          source = path.read_text(encoding="utf-8")
+
+          check_start = source.index("    func check() async {")
+          ping_start = source.index("    func ping() async {")
+          toggle_start = source.index("    func toggleChannel() async {")
+
+          check_function = r'''    func check() async {
+              guard canTest else {
+                  setMessage("Заполни профиль, ключ и проверь интернет.", error: true)
+                  return
+              }
+
+              busy = true
+              statusText = "Check…"
+              WLOLCClearLogs()
+              configure()
+              defer { busy = false; refreshLogs() }
+
+              let provider = profile.provider
+              let transport = profile.transport
+              let room = profile.room
+              let clientID = profile.clientID
+              let key = secret
+              let socksPort = profile.socksPort
+              let vp8FPS = profile.vp8FPS
+              let vp8BatchSize = profile.vp8BatchSize
+
+              do {
+                  let result = try await Task.detached(priority: .userInitiated) {
+                      var error: NSError?
+                      let elapsed = WLOLCCheck(
+                          provider,
+                          transport,
+                          room,
+                          clientID,
+                          key,
+                          socksPort,
+                          15_000,
+                          vp8FPS,
+                          vp8BatchSize,
+                          &error
+                      )
+
+                      if let error { throw error }
+                      return elapsed
+                  }.value
+
+                  checkMs = result
+                  statusText = "Peer найден"
+                  setMessage("Check успешен за \(result) мс.", error: false)
+              } catch {
+                  statusText = "Check failed"
+                  setMessage(error.localizedDescription, error: true)
+              }
+          }'''
+
+          ping_function = r'''    func ping() async {
+              guard canTest else {
+                  setMessage("Заполни профиль, ключ и проверь интернет.", error: true)
+                  return
+              }
+
+              busy = true
+              statusText = "HTTP Ping…"
+              WLOLCClearLogs()
+              configure()
+              defer { busy = false; refreshLogs() }
+
+              let provider = profile.provider
+              let transport = profile.transport
+              let room = profile.room
+              let clientID = profile.clientID
+              let key = secret
+              let socksPort = profile.socksPort
+              let pingURL = profile.pingURL
+              let vp8FPS = profile.vp8FPS
+              let vp8BatchSize = profile.vp8BatchSize
+
+              do {
+                  let result = try await Task.detached(priority: .userInitiated) {
+                      var error: NSError?
+                      let elapsed = WLOLCPing(
+                          provider,
+                          transport,
+                          room,
+                          clientID,
+                          key,
+                          socksPort,
+                          25_000,
+                          pingURL,
+                          vp8FPS,
+                          vp8BatchSize,
+                          &error
+                      )
+
+                      if let error { throw error }
+                      return elapsed
+                  }.value
+
+                  pingMs = result
+                  statusText = "Трафик проходит"
+                  setMessage("HTTP прошёл через VPS за \(result) мс.", error: false)
+              } catch {
+                  statusText = "Ping failed"
+                  setMessage(error.localizedDescription, error: true)
+              }
+          }'''
+
+          patched = (
+              source[:check_start]
+              + check_function
+              + "\n\n"
+              + ping_function
+              + "\n\n"
+              + source[toggle_start:]
+          )
+
+          path.write_text(patched, encoding="utf-8")
+
+          if "self.profile.provider" in patched:
+              raise SystemExit("Patch failed: self.profile.provider remains")
+          if "self.profile.transport" in patched:
+              raise SystemExit("Patch failed: self.profile.transport remains")
+
+          print("AppModel.swift patched successfully")
+          PY
+
+          grep -n "func check" App/AppModel.swift
+          grep -n "let provider = profile.provider" App/AppModel.swift
+          grep -n "func ping" App/AppModel.swift
+
       - name: Generate Xcode project
         run: xcodegen generate
 
@@ -62,8 +199,10 @@ jobs:
           mkdir -p Payload
           cp -R "$APP" Payload/
           /usr/bin/zip -qry WhiteListTransportTest-unsigned.ipa Payload
+          shasum -a 256 WhiteListTransportTest-unsigned.ipa
 
       - name: Upload IPA
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: WhiteListTransportTest-unsigned-ipa
@@ -71,3 +210,11 @@ jobs:
             WhiteListTransportTest-unsigned.ipa
             build.log
           if-no-files-found: error
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: WhiteListTransportTest-failed-build-log
+          path: build.log
+          if-no-files-found: ignore
