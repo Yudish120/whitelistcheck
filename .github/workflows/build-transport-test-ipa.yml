@@ -36,6 +36,19 @@ jobs:
           export PATH="$(go env GOPATH)/bin:$PATH"
           bash scripts/build_olcrtc_ios.sh
 
+      - name: Patch iOS bridge
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64
+          payload = "I2ltcG9ydCAiT0xDQnJpZGdlLmgiCiNpbXBvcnQgPE1vYmlsZS9Nb2JpbGUuaD4KCnN0YXRpYyBOU011dGFibGVTdHJpbmcgKldMTG9nQnVmZmVyOwpzdGF0aWMgTlNPYmplY3QgKldMTG9nTG9jazsKc3RhdGljIGNvbnN0IE5TVUludGVnZXIgV0xNYXhMb2dMZW5ndGggPSAyNjIxNDQ7CgpAaW50ZXJmYWNlIFdMR29Mb2dXcml0ZXIgOiBOU09iamVjdCA8TW9iaWxlTG9nV3JpdGVyPgpAZW5kCgpAaW1wbGVtZW50YXRpb24gV0xHb0xvZ1dyaXRlcgotICh2b2lkKXdyaXRlTG9nOihOU1N0cmluZyAqKW1lc3NhZ2UgewogICAgaWYgKG1lc3NhZ2UubGVuZ3RoID09IDApIHJldHVybjsKCiAgICBOU1N0cmluZyAqbGluZSA9IFtOU1N0cmluZyBzdHJpbmdXaXRoRm9ybWF0OkAiJUAgJUAiLAogICAgICAgICAgICAgICAgICAgICAgW1tOU0RhdGUgZGF0ZV0gZGVzY3JpcHRpb25dLAogICAgICAgICAgICAgICAgICAgICAgbWVzc2FnZV07CgogICAgQHN5bmNocm9uaXplZCAoV0xMb2dMb2NrKSB7CiAgICAgICAgW1dMTG9nQnVmZmVyIGFwcGVuZFN0cmluZzpsaW5lXTsKCiAgICAgICAgaWYgKCFbbGluZSBoYXNTdWZmaXg6QCJcbiJdKSB7CiAgICAgICAgICAgIFtXTExvZ0J1ZmZlciBhcHBlbmRTdHJpbmc6QCJcbiJdOwogICAgICAgIH0KCiAgICAgICAgaWYgKFdMTG9nQnVmZmVyLmxlbmd0aCA+IFdMTWF4TG9nTGVuZ3RoKSB7CiAgICAgICAgICAgIE5TVUludGVnZXIgcmVtb3ZlTGVuZ3RoID0gV0xMb2dCdWZmZXIubGVuZ3RoIC0gV0xNYXhMb2dMZW5ndGg7CiAgICAgICAgICAgIFtXTExvZ0J1ZmZlciBkZWxldGVDaGFyYWN0ZXJzSW5SYW5nZTpOU01ha2VSYW5nZSgwLCByZW1vdmVMZW5ndGgpXTsKICAgICAgICB9CiAgICB9CgogICAgTlNMb2coQCJbb2xjUlRDXSAlQCIsIG1lc3NhZ2UpOwp9CkBlbmQKCnN0YXRpYyBXTEdvTG9nV3JpdGVyICpXTFdyaXRlcjsKCnN0YXRpYyB2b2lkIFdMRW5zdXJlTG9nZ2VyKHZvaWQpIHsKICAgIHN0YXRpYyBkaXNwYXRjaF9vbmNlX3Qgb25jZVRva2VuOwogICAgZGlzcGF0Y2hfb25jZSgmb25jZVRva2VuLCBeewogICAgICAgIFdMTG9nQnVmZmVyID0gW05TTXV0YWJsZVN0cmluZyBzdHJpbmddOwogICAgICAgIFdMTG9nTG9jayA9IFtOU09iamVjdCBuZXddOwogICAgICAgIFdMV3JpdGVyID0gW1dMR29Mb2dXcml0ZXIgbmV3XTsKICAgICAgICBNb2JpbGVTZXRMb2dXcml0ZXIoV0xXcml0ZXIpOwogICAgICAgIE1vYmlsZVNldFByb3ZpZGVycygpOwogICAgfSk7Cn0KCnZvaWQgV0xPTENDb25maWd1cmUoQk9PTCBkZWJ1Z0VuYWJsZWQsCiAgICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIGxpdmVuZXNzSW50ZXJ2YWxNcywKICAgICAgICAgICAgICAgICAgICBOU0ludGVnZXIgbGl2ZW5lc3NUaW1lb3V0TXMsCiAgICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIGZhaWx1cmVzLAogICAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhGUFMsCiAgICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHZwOEJhdGNoU2l6ZSwKICAgICAgICAgICAgICAgICAgICBOU1N0cmluZyAqZG5zU2VydmVyKSB7CiAgICBXTEVuc3VyZUxvZ2dlcigpOwogICAgTW9iaWxlU2V0RGVidWcoZGVidWdFbmFibGVkKTsKICAgIE1vYmlsZVNldFNvY2tzTGlzdGVuSG9zdChAIjEyNy4wLjAuMSIpOwogICAgTW9iaWxlU2V0RE5TKGRuc1NlcnZlcik7CiAgICBNb2JpbGVTZXRMaXZlbmVzc09wdGlvbnMoKGxvbmcpbGl2ZW5lc3NJbnRlcnZhbE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKWxpdmVuZXNzVGltZW91dE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKWZhaWx1cmVzKTsKICAgIE1vYmlsZVNldFZQOE9wdGlvbnMoKGxvbmcpdnA4RlBTLCAobG9uZyl2cDhCYXRjaFNpemUpOwp9CgpCT09MIFdMT0xDU3RhcnQoTlNTdHJpbmcgKnByb3ZpZGVyLAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKnRyYW5zcG9ydCwKICAgICAgICAgICAgICAgIE5TU3RyaW5nICpyb29tLAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKmNsaWVudElELAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKmtleUhleCwKICAgICAgICAgICAgICAgIE5TSW50ZWdlciBzb2Nrc1BvcnQsCiAgICAgICAgICAgICAgICBOU1N0cmluZyAqc29ja3NVc2VyLAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKnNvY2tzUGFzc3dvcmQsCiAgICAgICAgICAgICAgICBOU0Vycm9yICoqZXJyb3IpIHsKICAgIFdMRW5zdXJlTG9nZ2VyKCk7CgogICAgcmV0dXJuIE1vYmlsZVN0YXJ0V2l0aFRyYW5zcG9ydChwcm92aWRlciwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHJhbnNwb3J0LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByb29tLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjbGllbnRJRCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAga2V5SGV4LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAobG9uZylzb2Nrc1BvcnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNvY2tzVXNlciwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc29ja3NQYXNzd29yZCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZXJyb3IpOwp9CgpCT09MIFdMT0xDV2FpdFJlYWR5KE5TSW50ZWdlciB0aW1lb3V0TXMsIE5TRXJyb3IgKiplcnJvcikgewogICAgcmV0dXJuIE1vYmlsZVdhaXRSZWFkeSgobG9uZyl0aW1lb3V0TXMsIGVycm9yKTsKfQoKdm9pZCBXTE9MQ1N0b3Aodm9pZCkgewogICAgTW9iaWxlU3RvcCgpOwp9CgpCT09MIFdMT0xDSXNSdW5uaW5nKHZvaWQpIHsKICAgIHJldHVybiBNb2JpbGVJc1J1bm5pbmcoKTsKfQoKaW50NjRfdCBXTE9MQ0NoZWNrKE5TU3RyaW5nICpwcm92aWRlciwKICAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICp0cmFuc3BvcnQsCiAgICAgICAgICAgICAgICAgICBOU1N0cmluZyAqcm9vbSwKICAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICpjbGllbnRJRCwKICAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICprZXlIZXgsCiAgICAgICAgICAgICAgICAgICBOU0ludGVnZXIgc29ja3NQb3J0LAogICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHRpbWVvdXRNcywKICAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhGUFMsCiAgICAgICAgICAgICAgICAgICBOU0ludGVnZXIgdnA4QmF0Y2hTaXplLAogICAgICAgICAgICAgICAgICAgTlNFcnJvciAqKmVycm9yKSB7CiAgICBXTEVuc3VyZUxvZ2dlcigpOwoKICAgIGludDY0X3QgZWxhcHNlZCA9IDA7CiAgICBCT09MIHN1Y2NlZWRlZCA9IE1vYmlsZUNoZWNrKHByb3ZpZGVyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0cmFuc3BvcnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJvb20sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsaWVudElELAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBrZXlIZXgsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKXNvY2tzUG9ydCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGxvbmcpdGltZW91dE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAobG9uZyl2cDhGUFMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKXZwOEJhdGNoU2l6ZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJmVsYXBzZWQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVycm9yKTsKCiAgICByZXR1cm4gc3VjY2VlZGVkID8gZWxhcHNlZCA6IDA7Cn0KCmludDY0X3QgV0xPTENQaW5nKE5TU3RyaW5nICpwcm92aWRlciwKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKnRyYW5zcG9ydCwKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKnJvb20sCiAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICpjbGllbnRJRCwKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKmtleUhleCwKICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHNvY2tzUG9ydCwKICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHRpbWVvdXRNcywKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKnBpbmdVUkwsCiAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhGUFMsCiAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhCYXRjaFNpemUsCiAgICAgICAgICAgICAgICAgIE5TRXJyb3IgKiplcnJvcikgewogICAgV0xFbnN1cmVMb2dnZXIoKTsKCiAgICBpbnQ2NF90IGVsYXBzZWQgPSAwOwogICAgQk9PTCBzdWNjZWVkZWQgPSBNb2JpbGVQaW5nKHByb3ZpZGVyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zcG9ydCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByb29tLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsaWVudElELAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGtleUhleCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAobG9uZylzb2Nrc1BvcnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGxvbmcpdGltZW91dE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBpbmdVUkwsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGxvbmcpdnA4RlBTLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKXZwOEJhdGNoU2l6ZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmZWxhcHNlZCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlcnJvcik7CgogICAgcmV0dXJuIHN1Y2NlZWRlZCA/IGVsYXBzZWQgOiAwOwp9CgpOU1N0cmluZyAqV0xPTENMb2dzKHZvaWQpIHsKICAgIFdMRW5zdXJlTG9nZ2VyKCk7CgogICAgQHN5bmNocm9uaXplZCAoV0xMb2dMb2NrKSB7CiAgICAgICAgcmV0dXJuIFtXTExvZ0J1ZmZlciBjb3B5XTsKICAgIH0KfQoKdm9pZCBXTE9MQ0NsZWFyTG9ncyh2b2lkKSB7CiAgICBXTEVuc3VyZUxvZ2dlcigpOwoKICAgIEBzeW5jaHJvbml6ZWQgKFdMTG9nTG9jaykgewogICAgICAgIFtXTExvZ0J1ZmZlciBzZXRTdHJpbmc6QCIiXTsKICAgIH0KfQo="
+          Path("Shared/OLCBridge.m").write_bytes(base64.b64decode(payload))
+          print("OLCBridge.m patched successfully")
+          PY
+          grep -n "description]" Shared/OLCBridge.m
+          grep -n "MobileCheck" Shared/OLCBridge.m
+          grep -n "&elapsed" Shared/OLCBridge.m
+
       - name: Patch Swift concurrency
         run: |
           python3 - <<'PY'
@@ -48,7 +61,7 @@ jobs:
           ping_start = source.index("    func ping() async {")
           toggle_start = source.index("    func toggleChannel() async {")
 
-          check_function = r'''    func check() async {
+          check_function = r"""    func check() async {
               guard canTest else {
                   setMessage("Заполни профиль, ключ и проверь интернет.", error: true)
                   return
@@ -96,9 +109,9 @@ jobs:
                   statusText = "Check failed"
                   setMessage(error.localizedDescription, error: true)
               }
-          }'''
+          }"""
 
-          ping_function = r'''    func ping() async {
+          ping_function = r"""    func ping() async {
               guard canTest else {
                   setMessage("Заполни профиль, ключ и проверь интернет.", error: true)
                   return
@@ -148,7 +161,7 @@ jobs:
                   statusText = "Ping failed"
                   setMessage(error.localizedDescription, error: true)
               }
-          }'''
+          }"""
 
           patched = (
               source[:check_start]
@@ -169,9 +182,13 @@ jobs:
           print("AppModel.swift patched successfully")
           PY
 
-          grep -n "func check" App/AppModel.swift
-          grep -n "let provider = profile.provider" App/AppModel.swift
-          grep -n "func ping" App/AppModel.swift
+      - name: Verify generated API
+        run: |
+          set -euxo pipefail
+          HEADER="$(find Frameworks/Mobile.xcframework -name Mobile.objc.h | head -1)"
+          test -n "$HEADER"
+          grep "MobileCheck" "$HEADER"
+          grep "MobilePing" "$HEADER"
 
       - name: Generate Xcode project
         run: xcodegen generate
@@ -181,17 +198,7 @@ jobs:
           set -euxo pipefail
           rm -rf build Payload WhiteListTransportTest-unsigned.ipa
 
-          xcodebuild \
-            -project WhiteListTransportTest.xcodeproj \
-            -scheme WhiteListTransportTest \
-            -configuration Release \
-            -sdk iphoneos \
-            -destination 'generic/platform=iOS' \
-            -derivedDataPath build \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY="" \
-            build | tee build.log
+          xcodebuild             -project WhiteListTransportTest.xcodeproj             -scheme WhiteListTransportTest             -configuration Release             -sdk iphoneos             -destination 'generic/platform=iOS'             -derivedDataPath build             CODE_SIGNING_ALLOWED=NO             CODE_SIGNING_REQUIRED=NO             CODE_SIGN_IDENTITY=""             CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER=NO             build | tee build.log
 
           APP="build/Build/Products/Release-iphoneos/WhiteListTransportTest.app"
           test -d "$APP"
