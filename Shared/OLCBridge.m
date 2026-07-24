@@ -13,11 +13,12 @@ static const NSUInteger WLMaxLogLength = 262144;
     if (message.length == 0) return;
 
     NSString *line = [NSString stringWithFormat:@"%@ %@",
-                      [NSDate date].descriptionWithLocale,
+                      [[NSDate date] description],
                       message];
 
     @synchronized (WLLogLock) {
         [WLLogBuffer appendString:line];
+
         if (![line hasSuffix:@"\n"]) {
             [WLLogBuffer appendString:@"\n"];
         }
@@ -72,6 +73,7 @@ BOOL WLOLCStart(NSString *provider,
                 NSString *socksPassword,
                 NSError **error) {
     WLEnsureLogger();
+
     return MobileStartWithTransport(provider,
                                     transport,
                                     room,
@@ -106,16 +108,21 @@ int64_t WLOLCCheck(NSString *provider,
                    NSInteger vp8BatchSize,
                    NSError **error) {
     WLEnsureLogger();
-    return MobileCheck(provider,
-                       transport,
-                       room,
-                       clientID,
-                       keyHex,
-                       (long)socksPort,
-                       (long)timeoutMs,
-                       (long)vp8FPS,
-                       (long)vp8BatchSize,
-                       error);
+
+    int64_t elapsed = 0;
+    BOOL succeeded = MobileCheck(provider,
+                                 transport,
+                                 room,
+                                 clientID,
+                                 keyHex,
+                                 (long)socksPort,
+                                 (long)timeoutMs,
+                                 (long)vp8FPS,
+                                 (long)vp8BatchSize,
+                                 &elapsed,
+                                 error);
+
+    return succeeded ? elapsed : 0;
 }
 
 int64_t WLOLCPing(NSString *provider,
@@ -130,21 +137,27 @@ int64_t WLOLCPing(NSString *provider,
                   NSInteger vp8BatchSize,
                   NSError **error) {
     WLEnsureLogger();
-    return MobilePing(provider,
-                      transport,
-                      room,
-                      clientID,
-                      keyHex,
-                      (long)socksPort,
-                      (long)timeoutMs,
-                      pingURL,
-                      (long)vp8FPS,
-                      (long)vp8BatchSize,
-                      error);
+
+    int64_t elapsed = 0;
+    BOOL succeeded = MobilePing(provider,
+                                transport,
+                                room,
+                                clientID,
+                                keyHex,
+                                (long)socksPort,
+                                (long)timeoutMs,
+                                pingURL,
+                                (long)vp8FPS,
+                                (long)vp8BatchSize,
+                                &elapsed,
+                                error);
+
+    return succeeded ? elapsed : 0;
 }
 
 NSString *WLOLCLogs(void) {
     WLEnsureLogger();
+
     @synchronized (WLLogLock) {
         return [WLLogBuffer copy];
     }
@@ -152,6 +165,7 @@ NSString *WLOLCLogs(void) {
 
 void WLOLCClearLogs(void) {
     WLEnsureLogger();
+
     @synchronized (WLLogLock) {
         [WLLogBuffer setString:@""];
     }
