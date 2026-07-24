@@ -1,234 +1,3 @@
-
-
-
-fvkbdk-eu2.yaml
-Файл
-и так ожидаю 
-кстати 
-держи мой мой ямл
-
-как работает ?
-тип там же два подключения вс е дела
-
-
-Вставленный текст.txt
-Документ
-
-WL
-WhiteList VPN
-olcRTC Control Center
-
-Как работает
-Состояние соединения
-Управление сервером
-Логи
-API
-Логи
-Здесь будут journalctl и разобранные ошибки соединения.
-
-Jul 21 14:18:26 systemd[1]: Started WhiteList VPN olcRTC server.
-Jul 21 14:18:26 olcrtc: Connecting transport=datachannel carrier=jitsi ...
-Jul 21 14:18:28 olcrtc: MUC joined; waiting for peer …
-Jul 21 14:18:28 olcrtc: Link connected
-Jul 21 14:18:28 olcrtc: Current peers count: 0, Devices: []
-
-куда иыкатть 
-
-
-
-
-WhiteListMobileProbe-unsigned-ipa.zip
-ZIP-архив
-ВОТ смотри
-
-
-
-
-
-
-Вставленный текст(1).txt
-Документ
-
-
-Вставленный текст(2).txt
-Документ
-
-Skip to content
-Yudish120
-whitelistcheck
-Repository navigation
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security and quality
-Insights
-Settings
-Build olcRTC Transport Test IPA
-Build olcRTC Transport Test IPA #4
-All jobs
-Run details
-build
-failed now in 3m 39s
-Search logs
-3s
-1s
-2s
-17s
-4s
-2m 53s
-0s
-15s
-Failed frontend command:
-/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/runner/work/whitelistcheck/whitelistcheck/App/AppModel.swift /Users/runner/work/whitelistcheck/whitelistcheck/App/ContentView.swift /Users/runner/work/whitelistcheck/whitelistcheck/App/KeychainStore.swift /Users/runner/work/whitelistcheck/whitelistcheck/App/NetworkMonitor.swift /Users/runner/work/whitelistcheck/whitelistcheck/App/Profile.swift /Users/runner/work/whitelistcheck/whitelistcheck/App/WhiteListTransportTestApp.swift -supplementary-output-file-map /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/supplementaryOutputs-1 -target arm64-apple-ios16.0 -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -I /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Products/Release-iphoneos -F /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Products/Release-iphoneos -F /Users/runner/work/whitelistcheck/whitelistcheck/Frameworks -no-color-diagnostics -g -debug-info-format\=dwarf -dwarf-version\=4 -module-cache-path /Users/runner/work/whitelistcheck/whitelistcheck/build/ModuleCache.noindex -swift-version 5 -enforce-exclusivity\=checked -O -serialize-debugging-options -const-gather-protocols-file /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/WhiteListTransportTest_const_extract_protocols.json -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/runner/work/whitelistcheck/whitelistcheck/build/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/runner/work/whitelistcheck/whitelistcheck -resource-dir /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -file-compilation-dir /Users/runner/work/whitelistcheck/whitelistcheck -Xcc -ivfsstatcache -Xcc /Users/runner/work/whitelistcheck/whitelistcheck/build/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache -Xcc -I/Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/WhiteListTransportTest-generated-files.hmap -Xcc -I/Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/WhiteListTransportTest-own-target-headers.hmap -Xcc -I/Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/WhiteListTransportTest-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/WhiteListTransportTest-project-headers.hmap -Xcc -I/Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Products/Release-iphoneos/include -Xcc -I/Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/DerivedSources -import-objc-header /Users/runner/work/whitelistcheck/whitelistcheck/Shared/WhiteList-Bridging-Header.h -pch-output-dir /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/PrecompiledHeaders -module-name WhiteListTransportTest -frontend-parseable-output -disable-clang-spi -target-sdk-version 18.5 -target-sdk-name iphoneos18.5 -external-plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins\#/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/lib/swift/host/plugins\#/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -in-process-plugin-server-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/lib/swift/host/plugins -enable-default-cmo -num-threads 3 -o /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/AppModel.o -o /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/ContentView.o -o /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/KeychainStore.o -o /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/NetworkMonitor.o -o /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/Profile.o -o /Users/runner/work/whitelistcheck/whitelistcheck/build/Build/Intermediates.noindex/WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/WhiteListTransportTestApp.o -index-unit-output-path /WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/AppModel.o -index-unit-output-path /WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/ContentView.o -index-unit-output-path /WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/KeychainStore.o -index-unit-output-path /WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/NetworkMonitor.o -index-unit-output-path /WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/Profile.o -index-unit-output-path /WhiteListTransportTest.build/Release-iphoneos/WhiteListTransportTest.build/Objects-normal/arm64/WhiteListTransportTestApp.o
-note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'WhiteListTransportTest' from project 'WhiteListTransportTest')
-Error: Process completed with exit code 65.
-0s
-0s
-2s
-0s
-
-[![Build olcRTC Transport Test IPA](https://github.com/Yudish120/whitelistcheck/actions/workflows/build-transport-test-ipa.yml/badge.svg)](https://github.com/Yudish120/whitelistcheck/actions/workflows/build-transport-test-ipa.yml)
-
-
-logs_81551527911.zip
-ZIP-архив
-
-Обработка заняла 1m 25s
-Архив подтвердил: GitHub продолжал собирать старый AppModel.swift. Я сделал workflow, который сам исправляет Swift concurrency перед каждой сборкой, поэтому вручную менять AppModel.swift больше не надо.
-
-build-transport-test-ipa.yml
-
-Сделай так:
-
-GitHub → Code → .github → workflows.
-
-Открой build-transport-test-ipa.yml.
-
-Нажми карандаш Edit.
-
-Удали весь старый код.
-
-Открой скачанный файл Блокнотом и вставь весь его код.
-
-Нажми Commit changes.
-
-Перейди Actions → Build olcRTC Transport Test IPA.
-
-Нажми Run workflow.
-
-В новом запуске появится отдельный этап:
-
-Patch Swift concurrency
-Он должен пройти с зелёной галочкой и вывести:
-
-AppModel.swift patched successfully
-После этого начнётся сборка IPA. Если Xcode найдёт следующую ошибку, workflow теперь сохранит build.log отдельным артефактом даже при падении. 
-
-
-
-logs_81554132112.zip
-ZIP-архив
-
-Обработка заняла 1m 12s
-Нашёл точную следующую причину падения.
-
-Swift-патч уже прошёл. Теперь ошибка в Shared/OLCBridge.m:
-
-descriptionWithLocale — вызвано как свойство, а не метод
-MobileCheck — ожидалось 11 аргументов, передано 10
-MobilePing — ожидалось 12 аргументов, передано 11
-gomobile экспортировал Check и Ping в Objective-C как функции, которые возвращают BOOL, а результат задержки записывают через дополнительный указатель int64_t *. Это соответствует исходному Go API, где функции возвращают (int64, error). 
-
-Я обновил workflow: теперь он автоматически исправляет и Swift, и Objective-C bridge.
-
-build-transport-test-ipa-v2.yml
-
-Действия:
-
-GitHub → Code.
-
-Открой:
-
-.github/workflows/build-transport-test-ipa.yml
-Нажми карандаш Edit.
-
-Удали весь старый код.
-
-Открой скачанный build-transport-test-ipa-v2.yml Блокнотом.
-
-Скопируй весь код и вставь в GitHub.
-
-Нажми Commit changes.
-
-Запусти:
-
-Actions
-→ Build olcRTC Transport Test IPA
-→ Run workflow
-В новом запуске должны появиться зелёные этапы:
-
-Patch iOS bridge
-Patch Swift concurrency
-Verify generated API
-Generate Xcode project
-Build unsigned IPA
-Отдельный исправленный bridge тоже сохранил:
-
-Скачать OLCBridge.m
-
-Но вручную его загружать не требуется — новый workflow сам заменит файл во время сборки. 
-
-
-сегодня 20:31
-0267b250-2442-49a4-8e88-dba4594d1b4b.png
-
-logs_81605110771.zip
-ZIP-архив
-
-Обработка заняла 49s
-Нашёл точную причину №6: всё уже компилируется, падает только линковка.
-
-Не хватает системной библиотеки DNS resolver:
-
-_res_9_ninit
-_res_9_nsearch
-_res_9_nclose
-Исправление: добавить -lresolv.
-
-build-transport-test-ipa-v3.yml
-
-Замени текущий файл:
-
-.github/workflows/build-transport-test-ipa.yml
-на содержимое скачанного build-transport-test-ipa-v3.yml, затем:
-
-Commit changes
-→ Actions
-→ Build olcRTC Transport Test IPA
-→ Run workflow
-В этой версии в xcodebuild добавлено:
-
-OTHER_LDFLAGS='$(inherited) -lresolv'
-Предыдущие этапы уже проходят:
-
-Build olcRTC iOS framework ✅
-Patch iOS bridge ✅
-Patch Swift concurrency ✅
-Verify generated API ✅
-Generate Xcode project ✅
-Осталась именно линковка IPA. 
-
-
-Библиотека
-/
-WhiteList VPN
-/
-build-transport-test-ipa-v3.yml
-
-
 name: Build olcRTC Transport Test IPA
 
 on:
@@ -250,6 +19,7 @@ jobs:
           cache: false
 
       - name: Install tools
+        shell: bash
         run: |
           set -euxo pipefail
           brew install xcodegen
@@ -258,178 +28,56 @@ jobs:
           echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
 
       - name: Initialize gomobile
+        shell: bash
         run: |
+          set -euxo pipefail
           export PATH="$(go env GOPATH)/bin:$PATH"
           gomobile init
 
       - name: Build olcRTC iOS framework
+        shell: bash
         run: |
+          set -euxo pipefail
           export PATH="$(go env GOPATH)/bin:$PATH"
           bash scripts/build_olcrtc_ios.sh
 
-      - name: Patch iOS bridge
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import base64
-          payload = "I2ltcG9ydCAiT0xDQnJpZGdlLmgiCiNpbXBvcnQgPE1vYmlsZS9Nb2JpbGUuaD4KCnN0YXRpYyBOU011dGFibGVTdHJpbmcgKldMTG9nQnVmZmVyOwpzdGF0aWMgTlNPYmplY3QgKldMTG9nTG9jazsKc3RhdGljIGNvbnN0IE5TVUludGVnZXIgV0xNYXhMb2dMZW5ndGggPSAyNjIxNDQ7CgpAaW50ZXJmYWNlIFdMR29Mb2dXcml0ZXIgOiBOU09iamVjdCA8TW9iaWxlTG9nV3JpdGVyPgpAZW5kCgpAaW1wbGVtZW50YXRpb24gV0xHb0xvZ1dyaXRlcgotICh2b2lkKXdyaXRlTG9nOihOU1N0cmluZyAqKW1lc3NhZ2UgewogICAgaWYgKG1lc3NhZ2UubGVuZ3RoID09IDApIHJldHVybjsKCiAgICBOU1N0cmluZyAqbGluZSA9IFtOU1N0cmluZyBzdHJpbmdXaXRoRm9ybWF0OkAiJUAgJUAiLAogICAgICAgICAgICAgICAgICAgICAgW1tOU0RhdGUgZGF0ZV0gZGVzY3JpcHRpb25dLAogICAgICAgICAgICAgICAgICAgICAgbWVzc2FnZV07CgogICAgQHN5bmNocm9uaXplZCAoV0xMb2dMb2NrKSB7CiAgICAgICAgW1dMTG9nQnVmZmVyIGFwcGVuZFN0cmluZzpsaW5lXTsKCiAgICAgICAgaWYgKCFbbGluZSBoYXNTdWZmaXg6QCJcbiJdKSB7CiAgICAgICAgICAgIFtXTExvZ0J1ZmZlciBhcHBlbmRTdHJpbmc6QCJcbiJdOwogICAgICAgIH0KCiAgICAgICAgaWYgKFdMTG9nQnVmZmVyLmxlbmd0aCA+IFdMTWF4TG9nTGVuZ3RoKSB7CiAgICAgICAgICAgIE5TVUludGVnZXIgcmVtb3ZlTGVuZ3RoID0gV0xMb2dCdWZmZXIubGVuZ3RoIC0gV0xNYXhMb2dMZW5ndGg7CiAgICAgICAgICAgIFtXTExvZ0J1ZmZlciBkZWxldGVDaGFyYWN0ZXJzSW5SYW5nZTpOU01ha2VSYW5nZSgwLCByZW1vdmVMZW5ndGgpXTsKICAgICAgICB9CiAgICB9CgogICAgTlNMb2coQCJbb2xjUlRDXSAlQCIsIG1lc3NhZ2UpOwp9CkBlbmQKCnN0YXRpYyBXTEdvTG9nV3JpdGVyICpXTFdyaXRlcjsKCnN0YXRpYyB2b2lkIFdMRW5zdXJlTG9nZ2VyKHZvaWQpIHsKICAgIHN0YXRpYyBkaXNwYXRjaF9vbmNlX3Qgb25jZVRva2VuOwogICAgZGlzcGF0Y2hfb25jZSgmb25jZVRva2VuLCBeewogICAgICAgIFdMTG9nQnVmZmVyID0gW05TTXV0YWJsZVN0cmluZyBzdHJpbmddOwogICAgICAgIFdMTG9nTG9jayA9IFtOU09iamVjdCBuZXddOwogICAgICAgIFdMV3JpdGVyID0gW1dMR29Mb2dXcml0ZXIgbmV3XTsKICAgICAgICBNb2JpbGVTZXRMb2dXcml0ZXIoV0xXcml0ZXIpOwogICAgICAgIE1vYmlsZVNldFByb3ZpZGVycygpOwogICAgfSk7Cn0KCnZvaWQgV0xPTENDb25maWd1cmUoQk9PTCBkZWJ1Z0VuYWJsZWQsCiAgICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIGxpdmVuZXNzSW50ZXJ2YWxNcywKICAgICAgICAgICAgICAgICAgICBOU0ludGVnZXIgbGl2ZW5lc3NUaW1lb3V0TXMsCiAgICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIGZhaWx1cmVzLAogICAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhGUFMsCiAgICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHZwOEJhdGNoU2l6ZSwKICAgICAgICAgICAgICAgICAgICBOU1N0cmluZyAqZG5zU2VydmVyKSB7CiAgICBXTEVuc3VyZUxvZ2dlcigpOwogICAgTW9iaWxlU2V0RGVidWcoZGVidWdFbmFibGVkKTsKICAgIE1vYmlsZVNldFNvY2tzTGlzdGVuSG9zdChAIjEyNy4wLjAuMSIpOwogICAgTW9iaWxlU2V0RE5TKGRuc1NlcnZlcik7CiAgICBNb2JpbGVTZXRMaXZlbmVzc09wdGlvbnMoKGxvbmcpbGl2ZW5lc3NJbnRlcnZhbE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKWxpdmVuZXNzVGltZW91dE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKWZhaWx1cmVzKTsKICAgIE1vYmlsZVNldFZQOE9wdGlvbnMoKGxvbmcpdnA4RlBTLCAobG9uZyl2cDhCYXRjaFNpemUpOwp9CgpCT09MIFdMT0xDU3RhcnQoTlNTdHJpbmcgKnByb3ZpZGVyLAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKnRyYW5zcG9ydCwKICAgICAgICAgICAgICAgIE5TU3RyaW5nICpyb29tLAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKmNsaWVudElELAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKmtleUhleCwKICAgICAgICAgICAgICAgIE5TSW50ZWdlciBzb2Nrc1BvcnQsCiAgICAgICAgICAgICAgICBOU1N0cmluZyAqc29ja3NVc2VyLAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKnNvY2tzUGFzc3dvcmQsCiAgICAgICAgICAgICAgICBOU0Vycm9yICoqZXJyb3IpIHsKICAgIFdMRW5zdXJlTG9nZ2VyKCk7CgogICAgcmV0dXJuIE1vYmlsZVN0YXJ0V2l0aFRyYW5zcG9ydChwcm92aWRlciwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHJhbnNwb3J0LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByb29tLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjbGllbnRJRCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAga2V5SGV4LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAobG9uZylzb2Nrc1BvcnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNvY2tzVXNlciwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc29ja3NQYXNzd29yZCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZXJyb3IpOwp9CgpCT09MIFdMT0xDV2FpdFJlYWR5KE5TSW50ZWdlciB0aW1lb3V0TXMsIE5TRXJyb3IgKiplcnJvcikgewogICAgcmV0dXJuIE1vYmlsZVdhaXRSZWFkeSgobG9uZyl0aW1lb3V0TXMsIGVycm9yKTsKfQoKdm9pZCBXTE9MQ1N0b3Aodm9pZCkgewogICAgTW9iaWxlU3RvcCgpOwp9CgpCT09MIFdMT0xDSXNSdW5uaW5nKHZvaWQpIHsKICAgIHJldHVybiBNb2JpbGVJc1J1bm5pbmcoKTsKfQoKaW50NjRfdCBXTE9MQ0NoZWNrKE5TU3RyaW5nICpwcm92aWRlciwKICAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICp0cmFuc3BvcnQsCiAgICAgICAgICAgICAgICAgICBOU1N0cmluZyAqcm9vbSwKICAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICpjbGllbnRJRCwKICAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICprZXlIZXgsCiAgICAgICAgICAgICAgICAgICBOU0ludGVnZXIgc29ja3NQb3J0LAogICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHRpbWVvdXRNcywKICAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhGUFMsCiAgICAgICAgICAgICAgICAgICBOU0ludGVnZXIgdnA4QmF0Y2hTaXplLAogICAgICAgICAgICAgICAgICAgTlNFcnJvciAqKmVycm9yKSB7CiAgICBXTEVuc3VyZUxvZ2dlcigpOwoKICAgIGludDY0X3QgZWxhcHNlZCA9IDA7CiAgICBCT09MIHN1Y2NlZWRlZCA9IE1vYmlsZUNoZWNrKHByb3ZpZGVyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0cmFuc3BvcnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJvb20sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsaWVudElELAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBrZXlIZXgsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKXNvY2tzUG9ydCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGxvbmcpdGltZW91dE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAobG9uZyl2cDhGUFMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKXZwOEJhdGNoU2l6ZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJmVsYXBzZWQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVycm9yKTsKCiAgICByZXR1cm4gc3VjY2VlZGVkID8gZWxhcHNlZCA6IDA7Cn0KCmludDY0X3QgV0xPTENQaW5nKE5TU3RyaW5nICpwcm92aWRlciwKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKnRyYW5zcG9ydCwKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKnJvb20sCiAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICpjbGllbnRJRCwKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKmtleUhleCwKICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHNvY2tzUG9ydCwKICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHRpbWVvdXRNcywKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKnBpbmdVUkwsCiAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhGUFMsCiAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhCYXRjaFNpemUsCiAgICAgICAgICAgICAgICAgIE5TRXJyb3IgKiplcnJvcikgewogICAgV0xFbnN1cmVMb2dnZXIoKTsKCiAgICBpbnQ2NF90IGVsYXBzZWQgPSAwOwogICAgQk9PTCBzdWNjZWVkZWQgPSBNb2JpbGVQaW5nKHByb3ZpZGVyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zcG9ydCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByb29tLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsaWVudElELAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGtleUhleCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAobG9uZylzb2Nrc1BvcnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGxvbmcpdGltZW91dE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBpbmdVUkwsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGxvbmcpdnA4RlBTLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKXZwOEJhdGNoU2l6ZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmZWxhcHNlZCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlcnJvcik7CgogICAgcmV0dXJuIHN1Y2NlZWRlZCA/IGVsYXBzZWQgOiAwOwp9CgpOU1N0cmluZyAqV0xPTENMb2dzKHZvaWQpIHsKICAgIFdMRW5zdXJlTG9nZ2VyKCk7CgogICAgQHN5bmNocm9uaXplZCAoV0xMb2dMb2NrKSB7CiAgICAgICAgcmV0dXJuIFtXTExvZ0J1ZmZlciBjb3B5XTsKICAgIH0KfQoKdm9pZCBXTE9MQ0NsZWFyTG9ncyh2b2lkKSB7CiAgICBXTEVuc3VyZUxvZ2dlcigpOwoKICAgIEBzeW5jaHJvbml6ZWQgKFdMTG9nTG9jaykgewogICAgICAgIFtXTExvZ0J1ZmZlciBzZXRTdHJpbmc6QCIiXTsKICAgIH0KfQo="
-          Path("Shared/OLCBridge.m").write_bytes(base64.b64decode(payload))
-          print("OLCBridge.m patched successfully")
-          PY
-          grep -n "description]" Shared/OLCBridge.m
-          grep -n "MobileCheck" Shared/OLCBridge.m
-          grep -n "&elapsed" Shared/OLCBridge.m
-
-      - name: Patch Swift concurrency
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-
-          path = Path("App/AppModel.swift")
-          source = path.read_text(encoding="utf-8")
-
-          check_start = source.index("    func check() async {")
-          ping_start = source.index("    func ping() async {")
-          toggle_start = source.index("    func toggleChannel() async {")
-
-          check_function = r"""    func check() async {
-              guard canTest else {
-                  setMessage("Заполни профиль, ключ и проверь интернет.", error: true)
-                  return
-              }
-
-              busy = true
-              statusText = "Check…"
-              WLOLCClearLogs()
-              configure()
-              defer { busy = false; refreshLogs() }
-
-              let provider = profile.provider
-              let transport = profile.transport
-              let room = profile.room
-              let clientID = profile.clientID
-              let key = secret
-              let socksPort = profile.socksPort
-              let vp8FPS = profile.vp8FPS
-              let vp8BatchSize = profile.vp8BatchSize
-
-              do {
-                  let result = try await Task.detached(priority: .userInitiated) {
-                      var error: NSError?
-                      let elapsed = WLOLCCheck(
-                          provider,
-                          transport,
-                          room,
-                          clientID,
-                          key,
-                          socksPort,
-                          15_000,
-                          vp8FPS,
-                          vp8BatchSize,
-                          &error
-                      )
-
-                      if let error { throw error }
-                      return elapsed
-                  }.value
-
-                  checkMs = result
-                  statusText = "Peer найден"
-                  setMessage("Check успешен за \(result) мс.", error: false)
-              } catch {
-                  statusText = "Check failed"
-                  setMessage(error.localizedDescription, error: true)
-              }
-          }"""
-
-          ping_function = r"""    func ping() async {
-              guard canTest else {
-                  setMessage("Заполни профиль, ключ и проверь интернет.", error: true)
-                  return
-              }
-
-              busy = true
-              statusText = "HTTP Ping…"
-              WLOLCClearLogs()
-              configure()
-              defer { busy = false; refreshLogs() }
-
-              let provider = profile.provider
-              let transport = profile.transport
-              let room = profile.room
-              let clientID = profile.clientID
-              let key = secret
-              let socksPort = profile.socksPort
-              let pingURL = profile.pingURL
-              let vp8FPS = profile.vp8FPS
-              let vp8BatchSize = profile.vp8BatchSize
-
-              do {
-                  let result = try await Task.detached(priority: .userInitiated) {
-                      var error: NSError?
-                      let elapsed = WLOLCPing(
-                          provider,
-                          transport,
-                          room,
-                          clientID,
-                          key,
-                          socksPort,
-                          25_000,
-                          pingURL,
-                          vp8FPS,
-                          vp8BatchSize,
-                          &error
-                      )
-
-                      if let error { throw error }
-                      return elapsed
-                  }.value
-
-                  pingMs = result
-                  statusText = "Трафик проходит"
-                  setMessage("HTTP прошёл через VPS за \(result) мс.", error: false)
-              } catch {
-                  statusText = "Ping failed"
-                  setMessage(error.localizedDescription, error: true)
-              }
-          }"""
-
-          patched = (
-              source[:check_start]
-              + check_function
-              + "\n\n"
-              + ping_function
-              + "\n\n"
-              + source[toggle_start:]
-          )
-
-          path.write_text(patched, encoding="utf-8")
-
-          if "self.profile.provider" in patched:
-              raise SystemExit("Patch failed: self.profile.provider remains")
-          if "self.profile.transport" in patched:
-              raise SystemExit("Patch failed: self.profile.transport remains")
-
-          print("AppModel.swift patched successfully")
-          PY
-
-      - name: Verify generated API
+      - name: Verify corrected source files
+        shell: bash
         run: |
           set -euxo pipefail
-          HEADER="$(find Frameworks/Mobile.xcframework -name Mobile.objc.h | head -1)"
-          test -n "$HEADER"
-          grep "MobileCheck" "$HEADER"
-          grep "MobilePing" "$HEADER"
+          test -f App/AppModel.swift
+          test -f Shared/OLCBridge.m
+          ! grep -q "self.profile.provider" App/AppModel.swift
+          grep -q "let provider = profile.provider" App/AppModel.swift
+          grep -q "BOOL succeeded = MobileCheck" Shared/OLCBridge.m
+          grep -q "BOOL succeeded = MobilePing" Shared/OLCBridge.m
+          grep -q "&elapsed" Shared/OLCBridge.m
 
       - name: Generate Xcode project
-        run: xcodegen generate
-
-      - name: Build unsigned IPA
+        shell: bash
         run: |
           set -euxo pipefail
-          rm -rf build Payload WhiteListTransportTest-unsigned.ipa
+          xcodegen generate
 
-          xcodebuild             -project WhiteListTransportTest.xcodeproj             -scheme WhiteListTransportTest             -configuration Release             -sdk iphoneos             -destination 'generic/platform=iOS'             -derivedDataPath build             CODE_SIGNING_ALLOWED=NO             CODE_SIGNING_REQUIRED=NO             CODE_SIGN_IDENTITY=""             OTHER_LDFLAGS='$(inherited) -lresolv'             CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER=NO             build | tee build.log
+      - name: Build unsigned IPA
+        shell: bash
+        run: |
+          set -euxo pipefail
+          rm -rf build Payload WhiteListTransportTest-unsigned.ipa build.log
+
+          xcodebuild \
+            -project WhiteListTransportTest.xcodeproj \
+            -scheme WhiteListTransportTest \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            OTHER_LDFLAGS='$(inherited) -lresolv' \
+            CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER=NO \
+            build | tee build.log
 
           APP="build/Build/Products/Release-iphoneos/WhiteListTransportTest.app"
           test -d "$APP"
@@ -449,241 +97,7 @@ jobs:
             build.log
           if-no-files-found: error
 
-      - name: Upload build log on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: WhiteListTransportTest-failed-build-log
-          path: build.log
-          if-no-files-found: ignore
-Библиотека
-/
-WhiteList VPN
-/
-build-transport-test-ipa-v3.yml
-
-
-name: Build olcRTC Transport Test IPA
-
-on:
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: macos-15
-    timeout-minutes: 40
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: "1.26.5"
-          cache: false
-
-      - name: Install tools
-        run: |
-          set -euxo pipefail
-          brew install xcodegen
-          go install golang.org/x/mobile/cmd/gomobile@latest
-          go install golang.org/x/mobile/cmd/gobind@latest
-          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
-
-      - name: Initialize gomobile
-        run: |
-          export PATH="$(go env GOPATH)/bin:$PATH"
-          gomobile init
-
-      - name: Build olcRTC iOS framework
-        run: |
-          export PATH="$(go env GOPATH)/bin:$PATH"
-          bash scripts/build_olcrtc_ios.sh
-
-      - name: Patch iOS bridge
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          import base64
-          payload = "I2ltcG9ydCAiT0xDQnJpZGdlLmgiCiNpbXBvcnQgPE1vYmlsZS9Nb2JpbGUuaD4KCnN0YXRpYyBOU011dGFibGVTdHJpbmcgKldMTG9nQnVmZmVyOwpzdGF0aWMgTlNPYmplY3QgKldMTG9nTG9jazsKc3RhdGljIGNvbnN0IE5TVUludGVnZXIgV0xNYXhMb2dMZW5ndGggPSAyNjIxNDQ7CgpAaW50ZXJmYWNlIFdMR29Mb2dXcml0ZXIgOiBOU09iamVjdCA8TW9iaWxlTG9nV3JpdGVyPgpAZW5kCgpAaW1wbGVtZW50YXRpb24gV0xHb0xvZ1dyaXRlcgotICh2b2lkKXdyaXRlTG9nOihOU1N0cmluZyAqKW1lc3NhZ2UgewogICAgaWYgKG1lc3NhZ2UubGVuZ3RoID09IDApIHJldHVybjsKCiAgICBOU1N0cmluZyAqbGluZSA9IFtOU1N0cmluZyBzdHJpbmdXaXRoRm9ybWF0OkAiJUAgJUAiLAogICAgICAgICAgICAgICAgICAgICAgW1tOU0RhdGUgZGF0ZV0gZGVzY3JpcHRpb25dLAogICAgICAgICAgICAgICAgICAgICAgbWVzc2FnZV07CgogICAgQHN5bmNocm9uaXplZCAoV0xMb2dMb2NrKSB7CiAgICAgICAgW1dMTG9nQnVmZmVyIGFwcGVuZFN0cmluZzpsaW5lXTsKCiAgICAgICAgaWYgKCFbbGluZSBoYXNTdWZmaXg6QCJcbiJdKSB7CiAgICAgICAgICAgIFtXTExvZ0J1ZmZlciBhcHBlbmRTdHJpbmc6QCJcbiJdOwogICAgICAgIH0KCiAgICAgICAgaWYgKFdMTG9nQnVmZmVyLmxlbmd0aCA+IFdMTWF4TG9nTGVuZ3RoKSB7CiAgICAgICAgICAgIE5TVUludGVnZXIgcmVtb3ZlTGVuZ3RoID0gV0xMb2dCdWZmZXIubGVuZ3RoIC0gV0xNYXhMb2dMZW5ndGg7CiAgICAgICAgICAgIFtXTExvZ0J1ZmZlciBkZWxldGVDaGFyYWN0ZXJzSW5SYW5nZTpOU01ha2VSYW5nZSgwLCByZW1vdmVMZW5ndGgpXTsKICAgICAgICB9CiAgICB9CgogICAgTlNMb2coQCJbb2xjUlRDXSAlQCIsIG1lc3NhZ2UpOwp9CkBlbmQKCnN0YXRpYyBXTEdvTG9nV3JpdGVyICpXTFdyaXRlcjsKCnN0YXRpYyB2b2lkIFdMRW5zdXJlTG9nZ2VyKHZvaWQpIHsKICAgIHN0YXRpYyBkaXNwYXRjaF9vbmNlX3Qgb25jZVRva2VuOwogICAgZGlzcGF0Y2hfb25jZSgmb25jZVRva2VuLCBeewogICAgICAgIFdMTG9nQnVmZmVyID0gW05TTXV0YWJsZVN0cmluZyBzdHJpbmddOwogICAgICAgIFdMTG9nTG9jayA9IFtOU09iamVjdCBuZXddOwogICAgICAgIFdMV3JpdGVyID0gW1dMR29Mb2dXcml0ZXIgbmV3XTsKICAgICAgICBNb2JpbGVTZXRMb2dXcml0ZXIoV0xXcml0ZXIpOwogICAgICAgIE1vYmlsZVNldFByb3ZpZGVycygpOwogICAgfSk7Cn0KCnZvaWQgV0xPTENDb25maWd1cmUoQk9PTCBkZWJ1Z0VuYWJsZWQsCiAgICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIGxpdmVuZXNzSW50ZXJ2YWxNcywKICAgICAgICAgICAgICAgICAgICBOU0ludGVnZXIgbGl2ZW5lc3NUaW1lb3V0TXMsCiAgICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIGZhaWx1cmVzLAogICAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhGUFMsCiAgICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHZwOEJhdGNoU2l6ZSwKICAgICAgICAgICAgICAgICAgICBOU1N0cmluZyAqZG5zU2VydmVyKSB7CiAgICBXTEVuc3VyZUxvZ2dlcigpOwogICAgTW9iaWxlU2V0RGVidWcoZGVidWdFbmFibGVkKTsKICAgIE1vYmlsZVNldFNvY2tzTGlzdGVuSG9zdChAIjEyNy4wLjAuMSIpOwogICAgTW9iaWxlU2V0RE5TKGRuc1NlcnZlcik7CiAgICBNb2JpbGVTZXRMaXZlbmVzc09wdGlvbnMoKGxvbmcpbGl2ZW5lc3NJbnRlcnZhbE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKWxpdmVuZXNzVGltZW91dE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKWZhaWx1cmVzKTsKICAgIE1vYmlsZVNldFZQOE9wdGlvbnMoKGxvbmcpdnA4RlBTLCAobG9uZyl2cDhCYXRjaFNpemUpOwp9CgpCT09MIFdMT0xDU3RhcnQoTlNTdHJpbmcgKnByb3ZpZGVyLAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKnRyYW5zcG9ydCwKICAgICAgICAgICAgICAgIE5TU3RyaW5nICpyb29tLAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKmNsaWVudElELAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKmtleUhleCwKICAgICAgICAgICAgICAgIE5TSW50ZWdlciBzb2Nrc1BvcnQsCiAgICAgICAgICAgICAgICBOU1N0cmluZyAqc29ja3NVc2VyLAogICAgICAgICAgICAgICAgTlNTdHJpbmcgKnNvY2tzUGFzc3dvcmQsCiAgICAgICAgICAgICAgICBOU0Vycm9yICoqZXJyb3IpIHsKICAgIFdMRW5zdXJlTG9nZ2VyKCk7CgogICAgcmV0dXJuIE1vYmlsZVN0YXJ0V2l0aFRyYW5zcG9ydChwcm92aWRlciwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHJhbnNwb3J0LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByb29tLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjbGllbnRJRCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAga2V5SGV4LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAobG9uZylzb2Nrc1BvcnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNvY2tzVXNlciwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc29ja3NQYXNzd29yZCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZXJyb3IpOwp9CgpCT09MIFdMT0xDV2FpdFJlYWR5KE5TSW50ZWdlciB0aW1lb3V0TXMsIE5TRXJyb3IgKiplcnJvcikgewogICAgcmV0dXJuIE1vYmlsZVdhaXRSZWFkeSgobG9uZyl0aW1lb3V0TXMsIGVycm9yKTsKfQoKdm9pZCBXTE9MQ1N0b3Aodm9pZCkgewogICAgTW9iaWxlU3RvcCgpOwp9CgpCT09MIFdMT0xDSXNSdW5uaW5nKHZvaWQpIHsKICAgIHJldHVybiBNb2JpbGVJc1J1bm5pbmcoKTsKfQoKaW50NjRfdCBXTE9MQ0NoZWNrKE5TU3RyaW5nICpwcm92aWRlciwKICAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICp0cmFuc3BvcnQsCiAgICAgICAgICAgICAgICAgICBOU1N0cmluZyAqcm9vbSwKICAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICpjbGllbnRJRCwKICAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICprZXlIZXgsCiAgICAgICAgICAgICAgICAgICBOU0ludGVnZXIgc29ja3NQb3J0LAogICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHRpbWVvdXRNcywKICAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhGUFMsCiAgICAgICAgICAgICAgICAgICBOU0ludGVnZXIgdnA4QmF0Y2hTaXplLAogICAgICAgICAgICAgICAgICAgTlNFcnJvciAqKmVycm9yKSB7CiAgICBXTEVuc3VyZUxvZ2dlcigpOwoKICAgIGludDY0X3QgZWxhcHNlZCA9IDA7CiAgICBCT09MIHN1Y2NlZWRlZCA9IE1vYmlsZUNoZWNrKHByb3ZpZGVyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0cmFuc3BvcnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJvb20sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsaWVudElELAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBrZXlIZXgsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKXNvY2tzUG9ydCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGxvbmcpdGltZW91dE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAobG9uZyl2cDhGUFMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKXZwOEJhdGNoU2l6ZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJmVsYXBzZWQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVycm9yKTsKCiAgICByZXR1cm4gc3VjY2VlZGVkID8gZWxhcHNlZCA6IDA7Cn0KCmludDY0X3QgV0xPTENQaW5nKE5TU3RyaW5nICpwcm92aWRlciwKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKnRyYW5zcG9ydCwKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKnJvb20sCiAgICAgICAgICAgICAgICAgIE5TU3RyaW5nICpjbGllbnRJRCwKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKmtleUhleCwKICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHNvY2tzUG9ydCwKICAgICAgICAgICAgICAgICAgTlNJbnRlZ2VyIHRpbWVvdXRNcywKICAgICAgICAgICAgICAgICAgTlNTdHJpbmcgKnBpbmdVUkwsCiAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhGUFMsCiAgICAgICAgICAgICAgICAgIE5TSW50ZWdlciB2cDhCYXRjaFNpemUsCiAgICAgICAgICAgICAgICAgIE5TRXJyb3IgKiplcnJvcikgewogICAgV0xFbnN1cmVMb2dnZXIoKTsKCiAgICBpbnQ2NF90IGVsYXBzZWQgPSAwOwogICAgQk9PTCBzdWNjZWVkZWQgPSBNb2JpbGVQaW5nKHByb3ZpZGVyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zcG9ydCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByb29tLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsaWVudElELAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGtleUhleCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAobG9uZylzb2Nrc1BvcnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGxvbmcpdGltZW91dE1zLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBpbmdVUkwsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKGxvbmcpdnA4RlBTLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChsb25nKXZwOEJhdGNoU2l6ZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAmZWxhcHNlZCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlcnJvcik7CgogICAgcmV0dXJuIHN1Y2NlZWRlZCA/IGVsYXBzZWQgOiAwOwp9CgpOU1N0cmluZyAqV0xPTENMb2dzKHZvaWQpIHsKICAgIFdMRW5zdXJlTG9nZ2VyKCk7CgogICAgQHN5bmNocm9uaXplZCAoV0xMb2dMb2NrKSB7CiAgICAgICAgcmV0dXJuIFtXTExvZ0J1ZmZlciBjb3B5XTsKICAgIH0KfQoKdm9pZCBXTE9MQ0NsZWFyTG9ncyh2b2lkKSB7CiAgICBXTEVuc3VyZUxvZ2dlcigpOwoKICAgIEBzeW5jaHJvbml6ZWQgKFdMTG9nTG9jaykgewogICAgICAgIFtXTExvZ0J1ZmZlciBzZXRTdHJpbmc6QCIiXTsKICAgIH0KfQo="
-          Path("Shared/OLCBridge.m").write_bytes(base64.b64decode(payload))
-          print("OLCBridge.m patched successfully")
-          PY
-          grep -n "description]" Shared/OLCBridge.m
-          grep -n "MobileCheck" Shared/OLCBridge.m
-          grep -n "&elapsed" Shared/OLCBridge.m
-
-      - name: Patch Swift concurrency
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-
-          path = Path("App/AppModel.swift")
-          source = path.read_text(encoding="utf-8")
-
-          check_start = source.index("    func check() async {")
-          ping_start = source.index("    func ping() async {")
-          toggle_start = source.index("    func toggleChannel() async {")
-
-          check_function = r"""    func check() async {
-              guard canTest else {
-                  setMessage("Заполни профиль, ключ и проверь интернет.", error: true)
-                  return
-              }
-
-              busy = true
-              statusText = "Check…"
-              WLOLCClearLogs()
-              configure()
-              defer { busy = false; refreshLogs() }
-
-              let provider = profile.provider
-              let transport = profile.transport
-              let room = profile.room
-              let clientID = profile.clientID
-              let key = secret
-              let socksPort = profile.socksPort
-              let vp8FPS = profile.vp8FPS
-              let vp8BatchSize = profile.vp8BatchSize
-
-              do {
-                  let result = try await Task.detached(priority: .userInitiated) {
-                      var error: NSError?
-                      let elapsed = WLOLCCheck(
-                          provider,
-                          transport,
-                          room,
-                          clientID,
-                          key,
-                          socksPort,
-                          15_000,
-                          vp8FPS,
-                          vp8BatchSize,
-                          &error
-                      )
-
-                      if let error { throw error }
-                      return elapsed
-                  }.value
-
-                  checkMs = result
-                  statusText = "Peer найден"
-                  setMessage("Check успешен за \(result) мс.", error: false)
-              } catch {
-                  statusText = "Check failed"
-                  setMessage(error.localizedDescription, error: true)
-              }
-          }"""
-
-          ping_function = r"""    func ping() async {
-              guard canTest else {
-                  setMessage("Заполни профиль, ключ и проверь интернет.", error: true)
-                  return
-              }
-
-              busy = true
-              statusText = "HTTP Ping…"
-              WLOLCClearLogs()
-              configure()
-              defer { busy = false; refreshLogs() }
-
-              let provider = profile.provider
-              let transport = profile.transport
-              let room = profile.room
-              let clientID = profile.clientID
-              let key = secret
-              let socksPort = profile.socksPort
-              let pingURL = profile.pingURL
-              let vp8FPS = profile.vp8FPS
-              let vp8BatchSize = profile.vp8BatchSize
-
-              do {
-                  let result = try await Task.detached(priority: .userInitiated) {
-                      var error: NSError?
-                      let elapsed = WLOLCPing(
-                          provider,
-                          transport,
-                          room,
-                          clientID,
-                          key,
-                          socksPort,
-                          25_000,
-                          pingURL,
-                          vp8FPS,
-                          vp8BatchSize,
-                          &error
-                      )
-
-                      if let error { throw error }
-                      return elapsed
-                  }.value
-
-                  pingMs = result
-                  statusText = "Трафик проходит"
-                  setMessage("HTTP прошёл через VPS за \(result) мс.", error: false)
-              } catch {
-                  statusText = "Ping failed"
-                  setMessage(error.localizedDescription, error: true)
-              }
-          }"""
-
-          patched = (
-              source[:check_start]
-              + check_function
-              + "\n\n"
-              + ping_function
-              + "\n\n"
-              + source[toggle_start:]
-          )
-
-          path.write_text(patched, encoding="utf-8")
-
-          if "self.profile.provider" in patched:
-              raise SystemExit("Patch failed: self.profile.provider remains")
-          if "self.profile.transport" in patched:
-              raise SystemExit("Patch failed: self.profile.transport remains")
-
-          print("AppModel.swift patched successfully")
-          PY
-
-      - name: Verify generated API
-        run: |
-          set -euxo pipefail
-          HEADER="$(find Frameworks/Mobile.xcframework -name Mobile.objc.h | head -1)"
-          test -n "$HEADER"
-          grep "MobileCheck" "$HEADER"
-          grep "MobilePing" "$HEADER"
-
-      - name: Generate Xcode project
-        run: xcodegen generate
-
-      - name: Build unsigned IPA
-        run: |
-          set -euxo pipefail
-          rm -rf build Payload WhiteListTransportTest-unsigned.ipa
-
-          xcodebuild             -project WhiteListTransportTest.xcodeproj             -scheme WhiteListTransportTest             -configuration Release             -sdk iphoneos             -destination 'generic/platform=iOS'             -derivedDataPath build             CODE_SIGNING_ALLOWED=NO             CODE_SIGNING_REQUIRED=NO             CODE_SIGN_IDENTITY=""             OTHER_LDFLAGS='$(inherited) -lresolv'             CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER=NO             build | tee build.log
-
-          APP="build/Build/Products/Release-iphoneos/WhiteListTransportTest.app"
-          test -d "$APP"
-
-          mkdir -p Payload
-          cp -R "$APP" Payload/
-          /usr/bin/zip -qry WhiteListTransportTest-unsigned.ipa Payload
-          shasum -a 256 WhiteListTransportTest-unsigned.ipa
-
-      - name: Upload IPA
-        if: success()
-        uses: actions/upload-artifact@v4
-        with:
-          name: WhiteListTransportTest-unsigned-ipa
-          path: |
-            WhiteListTransportTest-unsigned.ipa
-            build.log
-          if-no-files-found: error
-
-      - name: Upload build log on failure
+      - name: Upload failure log
         if: failure()
         uses: actions/upload-artifact@v4
         with:
