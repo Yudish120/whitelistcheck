@@ -41,11 +41,20 @@ jobs:
           export PATH="$(go env GOPATH)/bin:$PATH"
           bash scripts/build_olcrtc_ios.sh
 
-      - name: Apply fixed iOS source files
+      - name: Verify optimized source
         shell: bash
         run: |
           set -euxo pipefail
-          python3 scripts/apply_ios_fix.py
+          test -f App/AppModel.swift
+          test -f App/ContentView.swift
+          test -f App/Profile.swift
+          test -f Shared/OLCBridge.m
+          grep -Fq "configurationIssue" App/AppModel.swift
+          grep -Fq "friendlyMessage" App/AppModel.swift
+          grep -Fq "Импортировать" App/ContentView.swift
+          grep -Fq "BOOL succeeded = MobileCheck" Shared/OLCBridge.m
+          grep -Fq "BOOL succeeded = MobilePing" Shared/OLCBridge.m
+          grep -Fq "&elapsed" Shared/OLCBridge.m
 
       - name: Generate Xcode project
         shell: bash
@@ -85,7 +94,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: WhiteListTransportTest-unsigned-ipa
+          name: WhiteListTransportTest-0.3.0-unsigned-ipa
           path: |
             WhiteListTransportTest-unsigned.ipa
             build.log
@@ -95,6 +104,6 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: WhiteListTransportTest-failed-build-log
+          name: WhiteListTransportTest-0.3.0-failed-build-log
           path: build.log
           if-no-files-found: ignore
