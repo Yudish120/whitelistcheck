@@ -41,17 +41,11 @@ jobs:
           export PATH="$(go env GOPATH)/bin:$PATH"
           bash scripts/build_olcrtc_ios.sh
 
-      - name: Verify corrected source files
+      - name: Apply fixed iOS source files
         shell: bash
         run: |
           set -euxo pipefail
-          test -f App/AppModel.swift
-          test -f Shared/OLCBridge.m
-          ! grep -q "self.profile.provider" App/AppModel.swift
-          sed -n '/func check() async {/,/func ping() async {/p' App/AppModel.swift | head -120
-          grep -q "BOOL succeeded = MobileCheck" Shared/OLCBridge.m
-          grep -q "BOOL succeeded = MobilePing" Shared/OLCBridge.m
-          grep -q "&elapsed" Shared/OLCBridge.m
+          python3 scripts/apply_ios_fix.py
 
       - name: Generate Xcode project
         shell: bash
